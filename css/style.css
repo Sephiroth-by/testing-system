@@ -1,61 +1,165 @@
-body {
-    background-image: url(../images/pw_pattern.png);
-    font-family: Cambria;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-header {
+html, body {
+    background-image: url(../images/pw_pattern.png);
+    font-family: Cambria;
+    height: 100%;
+}
+
+.header {
     background: rgba(128, 128, 128, 0.05);
     border-radius: 0.50em;
     font-size: 1.40em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-    header img {
+    .header img {
         vertical-align: middle;
     }
 
-    header div {
+    .header div {
         margin: auto;
         width: 300px;
     }
 
-footer {
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    left: 0;
-    bottom: 0;
+.container {
+    height: 100%;
+    padding-bottom: 100px;
+    box-sizing: border-box;
 }
 
-    footer ul.icons {
+@media (min-width: 1200px) {
+
+    .banner-left {
+        float: left;
+        width: 15%;
+        height: 90%;
+        background-color: dimgray;
+    }
+
+    .banner-right {
+        float: left;
+        width: 15%;
+        height: 90%;
+        background-color: dimgray;
+    }
+
+    div.wrap {
+        display: table;
+        text-align: center;
+        height: 90%;
+        float: left;
+        width: 70%;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .banner-left {
+        display:none;
+    }
+
+    .banner-right {
+        display:none;
+    }
+
+    div.wrap {
+        display: table;
+        width: 100%;
+        text-align: center;
+        height: 90%;
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 768px) {
+
+    .banner-left {
+        width:100%;
+        height:15%;
+         background-color: dimgray;
+    }
+
+    .banner-right {
+        width:100%;
+        height:15%;
+         background-color: dimgray;
+    }
+
+    div.wrap {
+        display: table;
+        width: 100%;
+        text-align: center;
+        height: 60%;
+    }
+}
+
+div.wrap div.content {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    padding: 0px 10px;
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+    margin-top: -100px;
+}
+
+    .footer ul.icons {
         background: rgba(128, 128, 128, 0.05);
         border-radius: 0.50em;
         text-align: center;
+        padding: 0;
+        margin: 0 auto;
     }
 
-ul.icons li {
+.icons li {
     display: inline-block;
 }
 
-content {
-    text-align: center;
-    display: table;
-    width: 100%;
-    height: 400px;
-    overflow: auto;
-    margin-top: -200px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    bottom: 0;
-    right: 0;
+.facebook {
+    background-image: url(../images/social.png);
+    background-repeat: no-repeat;
+    display: block;
+    height: 56px;
+    width: 56px;
 }
+
+.vk {
+    background-image: url(../images/social.png);
+    background-repeat: no-repeat;
+    background-position: -55px 0px;
+    display: block;
+    height: 56px;
+    width: 56px;
+}
+
+.twitter {
+    background-image: url(../images/social.png);
+    background-repeat: no-repeat;
+    background-position: -107px 0px;
+    display: block;
+    height: 56px;
+    width: 56px;
+}
+
+.rss {
+    background-image: url(../images/social.png);
+    background-repeat: no-repeat;
+    background-position: -158px 0px;
+    display: block;
+    height: 56px;
+    width: 56px;
+}
+
+
 
 .question {
     width: 100%;
-    position: absolute;
-    top: 50%;
-    height: 100px;
-    margin-top: -50px;
 }
 
 .button {
