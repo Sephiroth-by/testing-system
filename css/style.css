@@ -11,7 +11,6 @@ html, body {
 
 .header {
     background: rgba(128, 128, 128, 0.05);
-    border-radius: 0.50em;
     font-size: 1.40em;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
@@ -31,20 +30,31 @@ html, body {
     box-sizing: border-box;
 }
 
+.body {
+    height: 100%;
+}
+
 @media (min-width: 1200px) {
+
+    .body {
+        margin: 0 auto;
+        width: 1200px;
+    }
 
     .banner-left {
         float: left;
         width: 15%;
         height: 90%;
         background-color: dimgray;
+        max-width: 100px;
     }
 
     .banner-right {
-        float: left;
+        float: right;
         width: 15%;
         height: 90%;
         background-color: dimgray;
+        max-width: 100px;
     }
 
     div.wrap {
@@ -52,18 +62,19 @@ html, body {
         text-align: center;
         height: 90%;
         float: left;
-        width: 70%;
+        width: 100%;
+        max-width: 1000px;
     }
 }
 
 @media (max-width: 767px) {
 
     .banner-left {
-        display:none;
+        display: none;
     }
 
     .banner-right {
-        display:none;
+        display: none;
     }
 
     div.wrap {
@@ -77,15 +88,15 @@ html, body {
 @media (max-width: 1200px) and (min-width: 768px) {
 
     .banner-left {
-        width:100%;
-        height:15%;
-         background-color: dimgray;
+        width: 100%;
+        height: 15%;
+        background-color: dimgray;
     }
 
     .banner-right {
-        width:100%;
-        height:15%;
-         background-color: dimgray;
+        width: 100%;
+        height: 15%;
+        background-color: dimgray;
     }
 
     div.wrap {
@@ -207,4 +218,18 @@ input[type="text"] {
     .answer:hover {
         background-color: #008CBA;
         color: white;
+    }
+
+.video {
+    width: 100%;
+    position: relative;
+    padding-top: 56.25%;
+}
+
+    .video iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
